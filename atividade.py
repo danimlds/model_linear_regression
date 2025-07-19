@@ -10,10 +10,10 @@ vendas = {
     'dez': 200000
 }
 
-meses = np.array([1,2,3,4,5,6]).reshape(-1,1)
+meses = np.array([7,8,9,10,11,12]).reshape(-1,1)
 valores = np.array([500000, 700000, 900000, 90000, 1000000, 200000])
 modelo = LinearRegression()
 modelo.fit(meses, valores)
-proximo_mes = 7
+proximo_mes = 1
 venda_prevista = modelo.predict([[proximo_mes]])[0]
 print(f'Previsao de venda para o proximo mes - {proximo_mes} -> {venda_prevista}')
